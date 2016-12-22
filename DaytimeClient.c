@@ -5,6 +5,8 @@
 //  Username: psyha3
 //
 
+// Borrows from the example server and client
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -45,7 +47,7 @@ int main(int argc, const char * argv[])
     memcpy(&sad.sin_addr, ptrh->h_addr, ptrh->h_length);
     
     /* Set port */
-    sscanf(argv[2], "%d", &port);
+    sscanf("1313", "%d", &port);
     sad.sin_port = htons(port);
     connect(sockFD, (struct sockaddr *)&sad, sizeof(sad));
     n = read(sockFD, buf, kBufSize);

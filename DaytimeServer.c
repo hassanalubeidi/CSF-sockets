@@ -1,8 +1,8 @@
 //
 //  DaytimeServer
 //
-//  Created by <insert name>
-//  Username: <inser username>
+//  Created by Hassan Al-ubeidi
+//  Username: psyha3
 //
 
 #include <stdio.h>
@@ -20,15 +20,7 @@
 
 #define kDAYTIMEPORT       1313
 #define kMULTITIMEZONEPORT 1414
-
-
 #define kBufSize 12
-#define WAITING 0
-#define SENTKNOCKKNOCK 1
-#define SENTCLUE 2
-#define ANOTHER 3
-#define BYE 4
-#define kNUMCLUES 5
 
 void ServerConnection(int fd);
 
@@ -88,7 +80,6 @@ void ServerConnection(int fd)
 	char outBuffer[512];
 	char inputBuffer[512];
 	char timeinfo_string[32];
-	int state = WAITING;
 	ssize_t n;
 	time_t rawtime;
 	struct tm * timeinfo;
